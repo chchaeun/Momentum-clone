@@ -1,0 +1,68 @@
+#focus-form>legend{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%);
+    padding: 0;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+#focus-form>input{
+    position: absolute;
+    left: 50%;
+    top: 73%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 35px;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #fff;
+    outline: none;
+    text-align: center;
+}
+
+#today{
+    font-weight: 500;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%);
+    padding: 0;
+}
+
+#focus-check{
+    font-weight: 450;
+    font-size: 25px;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translateX(-50%);
+    padding: 0;
+}
+
+#focus{
+    position: relative;
+    bottom: 2px;
+    width: 15px;
+    height: 15px;
+    background:#fff !important; 
+    opacity: 0.8;
+    border: 0;
+}
+
+#focus:checked + label:after{
+    position: relative;
+    bottom: 2px;
+    width: 15px;
+    height: 15px;
+    background:#fff !important; 
+    opacity: 0.8;
+    border: 0;
+    text-decoration-line: line-through;
+}

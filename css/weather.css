@@ -1,0 +1,10 @@
+#weather{
+    margin-right: 10px;
+    text-align: right;
+    font-size: 20px;
+}
+
+#weather>span:last-child{
+    margin-top: 3px;
+    font-size: 17px;
+}

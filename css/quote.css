@@ -1,0 +1,12 @@
+#quote{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+}
+
+#quote>span:last-child{
+    font-size: 80%;
+    opacity: 0.8;
+}

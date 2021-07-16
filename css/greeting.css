@@ -1,0 +1,38 @@
+#login-form>legend{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translateX(-50%);
+    padding: 0;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+#login-form>input {
+    position: absolute;
+    left: 50%;
+    top: 63%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 65px;
+    padding: 0;
+    color: #fff;
+    font-size: 38px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #fff;
+    outline: none;
+    text-align: center;
+}
+
+#greeting{
+    font-weight: 500;
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    transform: translateX(-50%);
+    padding: 0;
+}
+

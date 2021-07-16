@@ -5,39 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/greeting.css">
+    <link rel="stylesheet" href="css/focus.css">
+    <link rel="stylesheet" href="css/quote.css">
+    <link rel="stylesheet" href="css/weather.css">
     <title>Momentum</title>
 </head>
 <body>
-    <form id="login-form" class="hidden">
-        <input  
-        required
-        maxlength="15"
-        type="text" 
-        placeholder="What is your name?"
-        />
-        <input type="submit" value="Log In"/>
-    </form>
     <p id="clock">00:00:00</p>
+    <form id="login-form" class="hidden">
+        <legend>What is your name?</legend>
+        <input  
+            required
+            maxlength="15"
+            type="text" 
+        />
+    </form>
     <p id="greeting" class="hidden"></p>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required/>
+    <form id="focus-form" class="hidden">
+        <legend>What is your main focus for today?</legend>
+        <input type="text" required/>
+    </form>
+    <p id="today" class="hidden">TODAY</p>
+    <div id="focus-check">
+        <input type="checkbox" id="focus">
+        <label for="focus" class="hidden"></label>
+    </div>
+    <form id="todo-form" class="hidden">
+        <legend>To Do</legend>
+        <input type="text" required/>
     </form>
     <ul id="todo-list">
         
     </ul>
     <div id="quote">
         <span></span>
+        <br>
         <span></span>
     </div>
     <div id="weather">
         <span></span>
+        <br>
         <span></span>
     </div>
+    <script src="js/weather.js"></script>
     <script src="js/greetings.js"></script>
+    <script src="js/focus.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/background.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
 </body>
 </html>
