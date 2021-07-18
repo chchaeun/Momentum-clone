@@ -4,6 +4,8 @@
 * 바닐라JS를 이용한 Chrome 앱 [Momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?utm_source=chrome-ntp-icon) 클론 코딩
 * Tistory: [Link](https://chaennie.tistory.com/category/Clone%20Coding/Momentum)
 
+<br>
+
 ## Result
 ### Screen
 ![screen](https://user-images.githubusercontent.com/85024598/126061900-98e36f21-7660-484d-9b91-177efbc0dd74.png)
@@ -21,6 +23,8 @@
 ### Link
 [My Momentum](https://chchaeun.github.io/Momentum-clone/)
 
+<br>
+
 ## Environment
 ### IDE
 VSCode
@@ -29,6 +33,8 @@ VSCode
 - CSS
 - Javascript
 - Python
+
+<br>
 
 ## Comments
 ### Today's focus
@@ -39,6 +45,8 @@ VSCode
 Date().getHours()를 통해 시간대에 따라 다른 인삿말을 출력했다.
 ### Location
 화면을 새로고침할 때마다 위치 정보 요청 알림이 떠서 localStorage에 allow key를 만들어 y이면 더 이상 위치를 요청하지 않도록 했다. 
+
+<br>
 
 ## Reference
 - https://nomadcoders.co/javascript-for-beginners/lobby
