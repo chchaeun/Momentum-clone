@@ -31,6 +31,7 @@
     left: 89%;
     top: 70%;
     transform: translateX(-50%);
+    width: 1px;
     font-weight: 400;
     font-size: 15px;
     list-style: none;
