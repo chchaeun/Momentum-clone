@@ -1,6 +1,8 @@
-const images = [
-    "0.jpg", "1.jpg", "2.jpg"
-]
+const images = [];
+
+for(let i=0; i<9; i++){
+    images.push(`${i}.jpg`);
+}
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 

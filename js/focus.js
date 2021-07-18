@@ -1,28 +1,30 @@
 const focusForm = document.querySelector("#focus-form");
 const focusInput = focusForm.querySelector("input");
-const todayText = document.querySelector("#today");
+const today = document.querySelector("#today");
 const focus = document.querySelector("#focus");
+const focusImg = focus.querySelector("img");
+const focusText = focus.querySelector("span");
+
+const CHECKED_KEY = "checked";
+const THROUGH_KEY = "through";
 const FOCUS_KEY = "focus";
 const UNCHECKED_PATH = "./icon/unchecked.png";
 const CHECKED_PATH = "./icon/checked.png";
 
+let isChecked = localStorage.getItem(CHECKED_KEY);
 
-function checkedFocus(){
-    const isChecked = localStorage.getItem("checked");
-    const focusImg = focus.querySelector("img");
+function clickedBox(){
+    isChecked = localStorage.getItem(CHECKED_KEY);
+
     if(isChecked === null || isChecked==="0"){
-        focusImg.src = CHECKED_PATH;
-        focus.classList.add("through");
-        localStorage.setItem("checked", "1");
-
+        localStorage.setItem(CHECKED_KEY, "1");
     } else if (isChecked === "1"){
-        focusImg.src = UNCHECKED_PATH;
-        focus.classList.remove("through");
-        localStorage.setItem("checked", "0");
+        localStorage.setItem(CHECKED_KEY, "0");
     }
+    paintFocus();
 }
 
-// problem: 새로고침하면 무조건 unchecked 상태됨
+focusImg.addEventListener("click", clickedBox);
 
 function onFocusSubmit(event){
     event.preventDefault();
@@ -31,18 +33,24 @@ function onFocusSubmit(event){
     const newFocus = focusInput.value;
     localStorage.setItem(FOCUS_KEY, newFocus);
     localStorage.setItem(DATE_KEY, new Date().getDate());
-    paintFocus(newFocus);
+
+    paintFocus();
 }
 
-function paintFocus(savedFocus){
-    todayText.classList.remove(HIDDEN_CLASSNAME);
-    const checkbox = document.createElement("img");
-    checkbox.src = UNCHECKED_PATH;
-    checkbox.addEventListener("click", checkedFocus);
-    const span = document.createElement("span");
-    span.innerText = savedFocus;
-    focus.appendChild(checkbox);
-    focus.appendChild(span);
+function paintFocus(){
+    isChecked = localStorage.getItem(CHECKED_KEY);
+
+    if(isChecked === null || isChecked==="0"){
+        focusImg.src = UNCHECKED_PATH;
+        focus.classList.remove(THROUGH_KEY);
+
+    } else if (isChecked === "1"){
+        focusImg.src = CHECKED_PATH;
+        focus.classList.add(THROUGH_KEY);
+    }
+    focusText.innerText = localStorage.getItem(FOCUS_KEY);
+
+    today.classList.remove(HIDDEN_CLASSNAME);
     focus.classList.remove(HIDDEN_CLASSNAME);
 }
 
@@ -53,11 +61,11 @@ if(savedDate !== String(new Date().getDate())){
 const savedFocus = localStorage.getItem(FOCUS_KEY);
 
 if(savedUsername === null && savedFocus === null){
-    todayText.classList.add(HIDDEN_CLASSNAME);
+    today.classList.add(HIDDEN_CLASSNAME);
     focus.classList.add(HIDDEN_CLASSNAME);
 }else if(savedUsername !== null && savedFocus === null){
     focusForm.classList.remove(HIDDEN_CLASSNAME);
     focusForm.addEventListener("submit", onFocusSubmit); 
 } else{
-    paintFocus(savedFocus);
+    paintFocus();
 }

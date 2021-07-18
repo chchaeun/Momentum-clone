@@ -22,11 +22,12 @@ function paintToDo(newTodo){
     li.id = newTodo.id;
     const span = document.createElement("span");
     span.innerText = newTodo.text;
-    const button = document.createElement("button");
-    button.innerText = "✔"
+    const button = document.createElement("img");
+    button.src = CHECKED_PATH;
+    button.classList.add("todocheck");
     button.addEventListener("click", deleteToDo);
-    li.appendChild(span);
     li.appendChild(button);
+    li.appendChild(span);
     toDoList.appendChild(li);
 }
 
@@ -43,7 +44,9 @@ function handleToDoSubmit(event){
     saveToDos();
 }
 
+toDoForm.classList.remove(HIDDEN_CLASSNAME);
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
@@ -52,3 +55,4 @@ if(savedToDos !== null){
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
 }
+

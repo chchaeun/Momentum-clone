@@ -1,26 +1,24 @@
 
-
-#focus-form>legend{
-    width: 100%;
+#todo-form>legend{
     position: absolute;
-    left: 50%;
-    top: 65%;
+    left: 90%;
+    top: 60%;
     transform: translateX(-50%);
     padding: 0;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 25px;
 }
 
-#focus-form>input{
+#todo-form>input{
     position: absolute;
-    left: 50%;
-    top: 73%;
+    left: 90%;
+    top: 65%;
     transform: translateX(-50%);
-    width: 40%;
+    width: 200px;
     height: 35px;
     padding: 0;
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     background-color: transparent;
     border: none;
     border-bottom: 3px solid #fff;
@@ -28,36 +26,21 @@
     text-align: center;
 }
 
-#today{
-    font-weight: 500;
-    font-size: 20px;
+#todo-list{
     position: absolute;
-    left: 50%;
-    top: 65%;
-    transform: translateX(-50%);
-    padding: 0;
-}
-
-#focus{
-    width: 100%;
-    position: absolute;
-    left: 50%;
+    left: 89%;
     top: 70%;
     transform: translateX(-50%);
-    padding: 0;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 15px;
+    list-style: none;
+    text-align: left;
 }
-
-#focus>img{
+.todocheck{
     position: relative;
+    top: 2px;
     width: 15px;
     height: 15px;
     margin-right: 6px;
-    margin-top: 1px;
-}
-
-
-.through{
-    text-decoration: line-through;
+    margin-top: 4px;
 }
