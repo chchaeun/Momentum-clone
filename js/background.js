@@ -7,6 +7,6 @@ const chosenImage = images[Math.floor(Math.random() * images.length)];
 const bgImage = document.createElement("img");
 bgImage.classList.add("background");
 
-bgImage.src = `C:/Users/82104/Desktop/Momentum-clone/img/${chosenImage}`;
+bgImage.src = `./img/${chosenImage}`;
 
 document.body.appendChild(bgImage);
