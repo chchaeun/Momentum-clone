@@ -3,8 +3,8 @@ const focusInput = focusForm.querySelector("input");
 const todayText = document.querySelector("#today");
 const focus = document.querySelector("#focus");
 const FOCUS_KEY = "focus";
-const UNCHECKED_PATH = "C:/Users/82104/Desktop/Momentum-clone/icon/unchecked.png";
-const CHECKED_PATH = "C:/Users/82104/Desktop/Momentum-clone/icon/checked.png";
+const UNCHECKED_PATH = "./icon/unchecked.png";
+const CHECKED_PATH = "./icon/checked.png";
 
 
 function checkedFocus(){
